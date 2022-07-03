@@ -1,10 +1,12 @@
-start,end,srch = [int(input("Enter the value for start & end range and search value [press enter after each input]: ")) for x in range(3) ]
+start = 1
+end = 101
+srch  = 100
 mylis = list(range(start,end))
 pos = -1
 # print(mylis)
 def search(array,num):
     l = 0
-    u  =len(array)
+    u  =len(array)-1
     
     global pos
     while l<=u:
@@ -21,6 +23,6 @@ def search(array,num):
     return False
 
 if search(mylis,srch):
-    print("Found at position :{}".format(pos))
+    print("Found at position :{}".format(pos+1))
 else:
     print("Not found !")
